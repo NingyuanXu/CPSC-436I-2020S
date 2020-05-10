@@ -1,3 +1,5 @@
+/*reference from https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp
+*/
 h1 {
   background-color: black;
   color: white;
@@ -5,60 +7,39 @@ h1 {
   margin: 0;
   padding: 40px;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+
+.navbar-toggle {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
 }
 
-li {
+.navbar-toggle a {
   float: left;
-}
-
-li a {
-  display: block;
+  padding: 14px;
   color: white;
-  text-align: center;
-  padding: 14px 200px 14px 200px;
-  width: 33%;
   text-decoration: none;
+  font-size: 17px;
+  width: 30%; 
+  text-align: center;
 }
 
-li a:hover {
-  color: #111;
+.navbar-toggle a:hover {
+  background-color: brown;
 }
 
-@media screen and (min-width: 1001px) {
-  li a {
-    float: none;
-    display: block;
-    width: 33%;
-    text-align: left;
-  }
+.navbar-toggle a.active {
+  background-color: orange;
 }
 
-@media screen and (max-width: 501px) and (min-width: 1000){
-  li a {
-    float: none;
-    display: block;
-    width: 50%;
-    text-align: left;
-    padding: 14px 100px 14px 100px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  li a {
+@media screen and (max-width: 900px) {
+  .navbar-toggle a {
     float: none;
     display: block;
     width: 100%;
-    text-align: left;
-    padding: 14px 50px 14px 50px;
+    text-align: center;
   }
 }
-
 
 body {
   background-color: grey;
