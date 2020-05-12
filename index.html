@@ -59,11 +59,15 @@
 				</div>
 				<div class="row">
 					<input type="submit" id="add-submit" value="Add Message" onclick="addMessage();">
-					<input type="submit" id="delete-submit" value="Delete Message">
 				</div>
 			</div>
 			<div class="row">
-				<textarea id="message-list" name="list" rows=20></textarea>
+				<!-- <textarea id="message-list" name="list" rows=20></textarea> -->
+				<ul id="my-list">
+					<li>First message goes here!
+						<span class="close">x</span>
+					</li>
+				</ul>
 			</div>
 			<div class="rows">
 				<input type="submit" id="show" value="Show Messages">
