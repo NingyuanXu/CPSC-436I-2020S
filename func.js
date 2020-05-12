@@ -5,9 +5,7 @@ function addMessage() {
 	let li = document.createElement("li");
 	let textnode = document.createTextNode(text);
 	li.append(textnode);
-	if (text === "") {
-		alert("Please fill in your name, gender, and text!");
-	} else {
+	if (text) {
 		document.getElementById("my-list").append(li);
 	}
 	document.getElementById("text").value = ""; // to clear the text in the text field
@@ -25,7 +23,11 @@ function textHelper() {
 	let text = document.getElementById("text").value;
 	let name = document.getElementById("fname").value;
 	let gender = document.getElementById("gender").value;
-	return name + " (" + gender + ") says: " + text; 
+	if (text === "" || name === "") {
+		alert("Please fill in your name, gender, and text!");
+	} else {
+		return name + " (" + gender + ") says: " + text; 
+	}
 }
 
 function handleDeleteHelper() {
