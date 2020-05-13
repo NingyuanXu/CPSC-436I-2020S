@@ -62,12 +62,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<!-- <textarea id="message-list" name="list" rows=20></textarea> -->
-				<ul id="my-list">
-					<li>First message goes here!
-						<span class="close">x</span>
-					</li>
-				</ul>
+				<ul id="my-list"></ul>
 			</div>
 			<div class="rows">
 				<input type="submit" id="show" value="Show Messages" onclick="showMessage();">
@@ -75,5 +70,19 @@
 				<input type="submit" id="clear" value="Clear All Messages" onclick="clearMessage();">
 			</div>
 	</div>
+	<script type="text/javascript">
+		const initial_json = '{"text":"First message goes here!"}';
+		let myJson = JSON.parse(initial_json);
+		let lis = document.createElement("li");
+		let t = Object.values(myJson)[0];
+		let txt = document.createTextNode(t);
+		lis.append(txt);
+		document.getElementById("my-list").appendChild(lis);
+		let span = document.createElement("SPAN");
+		let xvalue = document.createTextNode("x");
+		span.className = "close";
+		span.appendChild(xvalue);
+		lis.appendChild(span);
+	</script>
 </body>
 </html>
