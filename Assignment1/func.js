@@ -1,4 +1,3 @@
-// Reference: http://w3schools-fa.ir/howto/howto_js_close_list_items.html
 
 function addMessage() {
 	let text = textHelper();
