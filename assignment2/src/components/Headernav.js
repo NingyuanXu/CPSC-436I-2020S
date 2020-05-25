@@ -11,7 +11,7 @@ class Headernav extends React.Component {
 		<div class="navbar-toggle">
 				<a class = "active" href="index.html">Home</a>
 				<a href="https://blogs.ubc.ca/cpsc436i2020s/">Course</a>
-				<a href="about.html">About</a>
+				<a href="https://github.com/NingyuanXu?tab=repositories">About</a>
 		</div>
 	</header>
 	</div>
