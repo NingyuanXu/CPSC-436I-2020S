@@ -1,0 +1,165 @@
+/*reference from https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp
+https://www.w3schools.com/howto/howto_css_responsive_form.asp In terms of responsive design
+*/
+h1 {
+  background-color: black;
+  color: white;
+  vertical-align: center;
+  margin: 0;
+  padding: 40px;
+}
+
+.navbar-toggle {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar-toggle a {
+  float: left;
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 30%; 
+  text-align: center;
+}
+
+.navbar-toggle a:hover {
+  background-color: brown;
+}
+
+.navbar-toggle a.active {
+  background-color: orange;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-toggle a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+body {
+  background-color: grey;
+}
+
+input[type=text], select option, textarea {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  float: left;
+}
+
+input[type=submit]:hover {
+  background-color: brown;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f1;
+  padding: 20px 30px 300px 30px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
+
+select#gender {
+  margin-top: 10px;
+}
+
+textarea#message-list {
+  margin-top: 20px;
+  width: 81%;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75 {
+    width: 100%;
+    margin-top: 0px;
+  }
+  textarea#message-list {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    align-content: center;
+  }
+  select#gender {
+  margin-top: 0px;
+}
+input[type="submit"] {
+  margin-top: 10px;
+}
+}
+
+ul {
+  box-sizing: border-box;
+  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0px;
+  padding-top: 50px;
+}
+
+ul li {
+  position: relative;
+  padding: 20px 8px 12px 40px;
+  background: #faf9f7;
+  list-style: none;
+}
+
+ul li:nth-child(odd) {
+  background: #e3e2de;
+}
+
+.close {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 15px 20px;
+  transform: translate(0%, -50%);
+  font-family: Arial, sans-serif;
+}
+
+.close:hover {background: #d6d3c9;}
+
+
