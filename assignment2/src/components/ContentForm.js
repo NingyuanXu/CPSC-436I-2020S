@@ -4,18 +4,35 @@ import './style.css';
 class ContentForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      fullname: '',
+      gender: 'male',
+      text: ''};
 
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleSubmit = event => {
+    if (this.state.fullname === "" || this.state.text === "") {
+      alert("Please fill in your name, gender, and text!");
+    } 
+    else {
+     alert(this.state.text);
+    }
+  }
+
+  handleChange = event => {
+     this.setState({
+      [event.target.name]: event.target.value
+    });
   }
 
   render() {
+    const { fullname, gender, text } = this.state;
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
       <div class="row">
         <div class="col-25">
           <label for="fname">
@@ -23,7 +40,7 @@ class ContentForm extends React.Component {
           </label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="fullname" placeholder="Your name here..." />
+          <input type="text" id="fname" name="fullname" value={this.state.fullname} placeholder="Your name here..." onChange={this.handleChange}/>
         </div>
       </div>
       <div class="row">
@@ -33,7 +50,7 @@ class ContentForm extends React.Component {
           </label>
         </div>
       <div class="col-75">
-        <select id= "gender" name="Gender">
+        <select id= "gender" name="gender" value={this.state.gender} onChange={this.handleChange}>
           <option value="male">
             Male
           </option>
@@ -53,11 +70,11 @@ class ContentForm extends React.Component {
           </label>
         </div>
         <div class="col-75">
-          <textarea id="text" name="text" placeholder="Your message here..."></textarea>
+          <textarea id="text" name="text" value={this.state.text} placeholder="Your message here..." onChange={this.handleChange}></textarea>
         </div>
       </div>
       <div><input type="submit" id="add-submit" value="Add Message"/></div>
-      </div>
+      </form>
     );
   }
 }
