@@ -2,7 +2,7 @@ import {ADD_MESSAGE, DELETE_MESSAGE,} from '../actions'
 import {combineReducers} from 'redux';
 
 
-const listReducer = (state =[], action) => {
+const listReducer = (state =["This is the first message!"], action) => {
 	if (action.type === "ADD_MESSAGE") {
 		const { text } = action;
 		return [...state, text];
