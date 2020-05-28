@@ -30,7 +30,7 @@ h1 {
 }
 
 .navbar-toggle a.active {
-  background-color: orange;
+  background-color: #069629;
 }
 
 @media screen and (max-width: 900px) {
