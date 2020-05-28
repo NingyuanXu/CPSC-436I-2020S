@@ -42,49 +42,40 @@ h1 {
   }
 }
 
-body {
-  background-color: grey;
-}
-
-input[type=text], select option, textarea {
-  width: 75%;
-  padding: 10px;
-  border: 1px solid grey;
-  border-radius: 6px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: black;
-  color: white;
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  float: left;
-}
-
-input[type=submit]:hover {
-  background-color: brown;
-}
-
-
-.container {
+.Container {
   border-radius: 5px;
   background-color: #f2f2f1;
-  padding: 20px 30px 300px 30px;
+  padding: 20px 30px 600px 30px;
 }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
-.col-75 {
+.row label {
+  margin: 20px 30px 5px 10px;
+  font-size: 17px;
+}
+
+.row input[type="search"] {
+  -webkit-appearance:none;
+  vertical-align: middle;
+  margin: 20px 30px 5px 0;
+  padding: 10px;
+  width: 50%;
+  height: 25px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.row button {
   float: left;
-  width: 75%;
-  margin-top: 6px;
+  margin: 25px 30px 5px 0;
+  width: 10%;
+  height: 25px;
 }
 
 .row:after {
@@ -93,42 +84,21 @@ input[type=submit]:hover {
   clear: both;
 }
 
-label {
-  padding: 10px 10px 10px 0;
-  display: inline-block;
-}
-
-select#gender {
-  margin-top: 10px;
-}
-
-textarea#message-list {
-  margin-top: 20px;
-  width: 81%;
-}
-
-@media screen and (max-width: 600px) {
-  .col-25, .col-75 {
-    width: 100%;
-    margin-top: 0px;
+@media (max-width: 800px) {
+  .row input[type="search"] {
+    margin: 20px 30px 5px 10px;
+    width: 97%;
   }
-  textarea#message-list {
-    width: 75%;
+  .row button {
+    float: left;
+    width: 97%;
+    margin-left: 10px;
+}
+  
+.row {
+    flex-direction: column;
+    align-items: stretch;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-    align-content: center;
-  }
-  select#gender {
-  margin-top: 0px;
-}
-input[type="submit"] {
-  margin-top: 10px;
-}
 }
 
 ul {
@@ -137,13 +107,11 @@ ul {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 0px;
-  padding-top: 50px;
 }
 
 ul li {
   position: relative;
   padding: 20px 8px 12px 40px;
-  background: #faf9f7;
   list-style: none;
 }
 
@@ -161,5 +129,3 @@ ul li:nth-child(odd) {
 }
 
 .close:hover {background: #d6d3c9;}
-
-

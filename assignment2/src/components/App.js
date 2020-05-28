@@ -1,7 +1,7 @@
 import React from 'react';
-import Headernav from './Headernav'
-import MessageList from './MessageList'
-import ContentForm from './ContentForm'
+import Footer from './Footer'
+import Message from './Message'
+import HeaderNav from './Headernav'
 import './style.css';
 
 
@@ -9,15 +9,13 @@ import './style.css';
 const App = () => {   //this is how you make a functional component
   return (
 	<div>
-		<Headernav/>
-  			<div class="container">
-  				<ContentForm/>
-  				<MessageList/>
-			</div>
+		<HeaderNav/>
+		<div className="Container">
+		<Footer />
+		<Message />
+		</div>
 	</div>
-
 );
 }
-
 
 export default App;

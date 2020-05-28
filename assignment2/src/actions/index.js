@@ -1,7 +1,13 @@
-let nextMessageId = 0
+export function addMessage(text) {
+    return {
+        type: 'ADD_MESSAGE',
+        text
+    }
+}
 
-export const addMessage = text => ({
-  type: 'ADD_MESSAGE',
-  id: nextMessageId++,
-  text: text
-})
+export function deleteMessage(index) {
+    return {
+        type: 'DELETE_MESSAGE',
+        index
+    }
+}

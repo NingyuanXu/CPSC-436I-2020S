@@ -1,12 +1,22 @@
-import { combineReducers } from 'redux';
+import {ADD_MESSAGE, DELETE_MESSAGE,} from '../actions'
+import {combineReducers} from 'redux';
 
-const counterReducer = (state, action) => {
-	if (action.type === 'ADD_MESSAGE') {
-		return ;
+
+const listReducer = (state =[], action) => {
+	if (action.type === "ADD_MESSAGE") {
+		const { text } = action;
+		return [...state, text];
+	} else if (action.type === "DELETE_MESSAGE") {
+		const { index } = action;
+		let newState = [...state];
+		newState.splice(index, 1);
+		return newState;
+	} else {
+		return state;
 	}
-	return state;
-};
+} 
 
-export default combineReducers({
-	count: combineReducers;
-});
+export default combineReducers ({
+	list: listReducer,
+})
+
