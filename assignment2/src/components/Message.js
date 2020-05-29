@@ -10,7 +10,7 @@ class Message extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false
+            isOpen: -1
         }
     }
 
@@ -19,7 +19,7 @@ class Message extends React.Component {
     }
 
     showMessage = (index) => {
-        this.setState({isOpen: !this.state.isOpen});
+        this.setState({isOpen: index});
     }
  
     render() {
@@ -37,7 +37,7 @@ class Message extends React.Component {
                             <li key={index} className="messageItem">
                                 <label onClick={(e) => this.showMessage(index)}>{item}</label>
                                 <span className="close" onClick={() => this.deleteMessage(index)}>x</span>
-                                <Dialogue isOpen={this.state.isOpen}>  Message id: {index}</Dialogue>
+                                <Dialogue isOpen={this.state.isOpen} id={index} onClose={(e) => this.setState({isOpen: -1})}>  Message id: {index}</Dialogue>
                             </li>
                             </ul>
                         )

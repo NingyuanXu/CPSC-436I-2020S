@@ -7,19 +7,21 @@ class Dialogue extends React.Component {
 
     let dialogue = (
       <div>
+        <button onClick= {this.props.onClose}>x</button>
         {this.props.children}
       </div>
       );
 
-      if (!this.props.isOpen) {
+      if (this.props.isOpen !== this.props.id || this.props.isOpen === -1) {
         dialogue = null;
       }
-    
+      
       return (
         <div className="detailed-view">
-          {dialogue}
+              {dialogue}
         </div>
       );
+      
   }
 }
 
