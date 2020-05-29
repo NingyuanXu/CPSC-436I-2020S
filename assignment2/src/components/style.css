@@ -120,6 +120,7 @@ ul li {
 ul li label{
     padding-top: 10px;
     padding-bottom: 10px;
+    max-width: 90%;
 }
 div .detailed-view {
     padding: 10px 0px 5px 1px;
@@ -148,6 +149,7 @@ ul li:nth-child(odd) {
   padding: 15px 20px;
   transform: translate(0%, -50%);
   font-family: Arial, sans-serif;
+  font-size:  100%;
 }
 
 .close:hover {background: #d6d3c9;}
