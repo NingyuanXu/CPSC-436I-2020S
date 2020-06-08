@@ -5,6 +5,7 @@ import './style.css';
 
 
 class Footer extends React.Component {
+	
 	constructor(props) {
         super(props);
         this.state = {

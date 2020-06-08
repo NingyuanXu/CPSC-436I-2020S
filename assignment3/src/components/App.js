@@ -6,7 +6,7 @@ import './style.css';
 
 
 
-const App = () => {   //this is how you make a functional component
+const App = () => {  
   return (
 	<div>
 		<HeaderNav/>
