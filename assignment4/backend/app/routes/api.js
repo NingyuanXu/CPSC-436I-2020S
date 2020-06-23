@@ -26,4 +26,11 @@ router.delete('/texts', function(req, res){
     console.log('DELETE request');
 });
 
+router.delete('/textsClear', function(req, res){
+  Data.deleteMany({}, function(texts){
+        res.send(texts);
+    }).catch(error => {console.log('caught', error)});
+    console.log('CLEAR request');
+});
+
 module.exports = router;

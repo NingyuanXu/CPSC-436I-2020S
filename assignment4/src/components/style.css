@@ -94,7 +94,9 @@ h1 {
     width: 97%;
     margin: 25px 30px 5px 10px;
 }
-  
+.clearButton {
+  width: 100%;
+}
 .row {
     flex-direction: column;
     align-items: stretch;
@@ -153,3 +155,10 @@ ul li:nth-child(odd) {
 }
 
 .close:hover {background: #d6d3c9;}
+
+.clearButton {
+  float: left;
+  margin: 25px 30px 5px 0;
+  height: 25px;
+  margin-left: 10px;
+}
