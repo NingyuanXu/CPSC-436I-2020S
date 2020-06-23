@@ -11,3 +11,17 @@ export function deleteMessage(index) {
         index
     }
 }
+
+export function getMessages(texts) {
+    return {
+        type: 'GET_MESSAGE',
+        texts
+    }
+}
+
+export function clearMessages() {
+    return {
+        type: 'CLEAR_MESSAGES'
+    }
+}
+
