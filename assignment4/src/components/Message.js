@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { deleteMessage,getMessages } from '../actions';
 import "./style.css";
 import Dialogue from './Dialogue';
-import axios from 'axios'
+import axios from 'axios';
 
 class Message extends React.Component {
     async componentDidMount() {
