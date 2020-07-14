@@ -9,7 +9,7 @@ class ClearButton extends React.Component {
     }
 
     handleClick() {
-        fetch('http://localhost:9000/api/textsClear', {
+        fetch('https://murmuring-ravine-91107.herokuapp.com/api/textsClear', {
             method: 'DELETE',
         }).then(res => this.props.clearMessages(res)).catch(
             console.log('not clear at all')

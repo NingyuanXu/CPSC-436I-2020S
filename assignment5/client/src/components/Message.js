@@ -8,7 +8,7 @@ import axios from 'axios';
 class Message extends React.Component {
     async componentDidMount() {
 		try {
-			let response = await fetch('http://localhost:9000/api/texts', {
+			let response = await fetch('https://murmuring-ravine-91107.herokuapp.com/api/texts', {
 				method: 'GET'
 			});
             const data = await response.json();
@@ -34,7 +34,7 @@ class Message extends React.Component {
         console.log(index);
         (async() => {
             console.log("hhhhhh");
-            await axios.delete('http://localhost:9000/api/texts', {
+            await axios.delete('https://murmuring-ravine-91107.herokuapp.com/api/texts', {
                 data: {
                     text: item
                 }

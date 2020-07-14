@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Data = require('../data');
+const Data = require('../models/message');
 
 router.get('/texts', function(req, res){
   Data.find({}).then(function(texts){

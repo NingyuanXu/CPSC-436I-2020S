@@ -25,7 +25,7 @@ addMessage = () => {
 		let idToBeAdded = 0;
 		idToBeAdded += this.props.list.length;
 		console.log(idToBeAdded);
-		axios.post('http://localhost:9000/api/texts', {
+		axios.post('https://murmuring-ravine-91107.herokuapp.com/api/texts', {
 				id: idToBeAdded,
 				text: inputMessage
 		})
